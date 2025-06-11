@@ -1,0 +1,68 @@
+[
+    {
+        "product_id": "ACC4001",
+        "product_title": "Logitech MX Master 3S Mouse",
+        "product_image": "https://i.ibb.co/Z6jtqcFR/accesories.png",
+        "category": "Accessories",
+        "price": 99,
+        "description": "Advanced ergonomic mouse with silent clicks and fast scrolling.",
+        "Specification": [
+            "Ergonomic",
+            "USB-C",
+            "Bluetooth",
+            "8 Buttons"
+        ],
+        "availability": true,
+        "rating": 4.6,
+        "brand": "Logitech"
+    },
+    {
+        "product_id": "ACC4002",
+        "product_title": "Anker USB-C Hub",
+        "product_image": "https://i.ibb.co/Z6jtqcFR/accesories.png",
+        "category": "Accessories",
+        "price": 65,
+        "description": "7-in-1 USB-C hub with HDMI, USB, SD, and power delivery.",
+        "Specification": [
+            "HDMI 4K",
+            "3x USB 3.0",
+            "SD/TF card",
+            "PD Charging"
+        ],
+        "availability": true,
+        "rating": 4.4,
+        "brand": "Anker"
+    },
+    {
+        "product_id": "ACC4003",
+        "product_title": "Sony WH-1000XM5",
+        "product_image": "https://i.ibb.co/Z6jtqcFR/accesories.png",
+        "category": "Accessories",
+        "price": 399,
+        "description": "Industry-leading noise-canceling wireless headphones.",
+        "Specification": [
+            "ANC",
+            "Bluetooth 5.2",
+            "30-hour Battery"
+        ],
+        "availability": true,
+        "rating": 4.9,
+        "brand": "Sony"
+    },
+    {
+        "product_id": "ACC4004",
+        "product_title": "Razer BlackWidow V3 Keyboard",
+        "product_image": "https://i.ibb.co/Z6jtqcFR/accesories.png",
+        "category": "Accessories",
+        "price": 139,
+        "description": "Mechanical gaming keyboard with RGB lighting.",
+        "Specification": [
+            "Mechanical Switches",
+            "RGB",
+            "USB"
+        ],
+        "availability": true,
+        "rating": 4.7,
+        "brand": "Razer"
+    }
+]

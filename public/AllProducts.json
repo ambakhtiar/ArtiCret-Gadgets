@@ -1,0 +1,268 @@
+[
+    {
+        "product_id": "LAP1001",
+        "product_title": "Dell XPS 13",
+        "product_image": "https://i.ibb.co/4RGhCsth/laptop.png",
+        "category": "Laptop",
+        "price": 999,
+        "description": "Ultra-thin, lightweight laptop with stunning display and performance.",
+        "Specification": [
+            "13.4\" FHD+",
+            "Intel i7",
+            "16GB RAM",
+            "512GB SSD"
+        ],
+        "availability": true,
+        "rating": 4.7,
+        "brand": "Dell"
+    },
+    {
+        "product_id": "LAP1002",
+        "product_title": "MacBook Air M2",
+        "product_image": "https://i.ibb.co/4RGhCsth/laptop.png",
+        "category": "Laptop",
+        "price": 1199,
+        "description": "Supercharged by M2 chip, ultra-portable and powerful.",
+        "Specification": [
+            "13.6\" Liquid Retina",
+            "M2 chip",
+            "8GB RAM",
+            "256GB SSD"
+        ],
+        "availability": true,
+        "rating": 4.9,
+        "brand": "Apple"
+    },
+    {
+        "product_id": "LAP1003",
+        "product_title": "HP Envy x360",
+        "product_image": "https://i.ibb.co/4RGhCsth/laptop.png",
+        "category": "Laptop",
+        "price": 799,
+        "description": "Convertible laptop with touchscreen and solid performance.",
+        "Specification": [
+            "15.6\" FHD",
+            "Ryzen 5",
+            "8GB RAM",
+            "256GB SSD"
+        ],
+        "availability": false,
+        "rating": 4.3,
+        "brand": "HP"
+    },
+    {
+        "product_id": "LAP1004",
+        "product_title": "Lenovo ThinkPad X1 Carbon",
+        "product_image": "https://i.ibb.co/4RGhCsth/laptop.png",
+        "category": "Laptop",
+        "price": 1299,
+        "description": "Premium business laptop with robust security and performance.",
+        "Specification": [
+            "14\" FHD",
+            "Intel i7",
+            "16GB RAM",
+            "1TB SSD"
+        ],
+        "availability": true,
+        "rating": 4.8,
+        "brand": "Lenovo"
+    },
+    {
+        "product_id": "MOB2001",
+        "product_title": "iPhone 14 Pro",
+        "product_image": "https://i.ibb.co/95W2nTK/mobile.png",
+        "category": "Mobile",
+        "price": 1099,
+        "description": "Apple's flagship with advanced camera and A16 Bionic chip.",
+        "Specification": [
+            "6.1\" OLED",
+            "A16 Bionic",
+            "128GB",
+            "Triple-camera"
+        ],
+        "availability": true,
+        "rating": 4.8,
+        "brand": "Apple"
+    },
+    {
+        "product_id": "MOB2002",
+        "product_title": "Samsung Galaxy S23",
+        "product_image": "https://i.ibb.co/95W2nTK/mobile.png",
+        "category": "Mobile",
+        "price": 899,
+        "description": "Flagship Samsung phone with top-tier performance and camera.",
+        "Specification": [
+            "6.1\" AMOLED",
+            "Snapdragon 8 Gen 2",
+            "128GB",
+            "Triple-camera"
+        ],
+        "availability": true,
+        "rating": 4.7,
+        "brand": "Samsung"
+    },
+    {
+        "product_id": "MOB2003",
+        "product_title": "OnePlus 11",
+        "product_image": "https://i.ibb.co/95W2nTK/mobile.png",
+        "category": "Mobile",
+        "price": 699,
+        "description": "High-performance Android phone with clean UI and fast charging.",
+        "Specification": [
+            "6.7\" AMOLED",
+            "Snapdragon 8 Gen 2",
+            "8GB RAM",
+            "128GB"
+        ],
+        "availability": true,
+        "rating": 4.6,
+        "brand": "OnePlus"
+    },
+    {
+        "product_id": "MOB2004",
+        "product_title": "Google Pixel 7",
+        "product_image": "https://i.ibb.co/95W2nTK/mobile.png",
+        "category": "Mobile",
+        "price": 599,
+        "description": "Clean Android experience with powerful AI features.",
+        "Specification": [
+            "6.3\" OLED",
+            "Google Tensor",
+            "128GB",
+            "Dual-camera"
+        ],
+        "availability": true,
+        "rating": 4.5,
+        "brand": "Google"
+    },
+    {
+        "product_id": "SWT3001",
+        "product_title": "Samsung Galaxy Watch 5",
+        "product_image": "https://i.ibb.co/hJh33VYs/smart-watc.png",
+        "category": "Smartwatch",
+        "price": 279,
+        "description": "Rugged smartwatch with health and fitness tracking features.",
+        "Specification": [
+            "GPS",
+            "Sleep Tracking",
+            "AMOLED Display"
+        ],
+        "availability": true,
+        "rating": 4.5,
+        "brand": "Samsung"
+    },
+    {
+        "product_id": "SWT3002",
+        "product_title": "Apple Watch Series 8",
+        "product_image": "https://i.ibb.co/hJh33VYs/smart-watc.png",
+        "category": "Smartwatch",
+        "price": 399,
+        "description": "Advanced health tracking with new temperature sensors.",
+        "Specification": [
+            "GPS + Cellular",
+            "Heart Rate Monitor",
+            "Crash Detection"
+        ],
+        "availability": true,
+        "rating": 4.8,
+        "brand": "Apple"
+    },
+    {
+        "product_id": "SWT3003",
+        "product_title": "Fitbit Versa 4",
+        "product_image": "https://i.ibb.co/hJh33VYs/smart-watc.png",
+        "category": "Smartwatch",
+        "price": 179,
+        "description": "Smart fitness watch with 24/7 heart tracking and GPS.",
+        "Specification": [
+            "Heart Rate",
+            "GPS",
+            "Water Resistant"
+        ],
+        "availability": false,
+        "rating": 4.2,
+        "brand": "Fitbit"
+    },
+    {
+        "product_id": "SWT3004",
+        "product_title": "Garmin Venu 2",
+        "product_image": "https://i.ibb.co/hJh33VYs/smart-watc.png",
+        "category": "Smartwatch",
+        "price": 349,
+        "description": "Fitness-focused watch with advanced health metrics.",
+        "Specification": [
+            "Heart Rate",
+            "Body Battery",
+            "AMOLED"
+        ],
+        "availability": true,
+        "rating": 4.4,
+        "brand": "Garmin"
+    },
+    {
+        "product_id": "ACC4001",
+        "product_title": "Logitech MX Master 3S Mouse",
+        "product_image": "https://i.ibb.co/Z6jtqcFR/accesories.png",
+        "category": "Accessories",
+        "price": 99,
+        "description": "Advanced ergonomic mouse with silent clicks and fast scrolling.",
+        "Specification": [
+            "Ergonomic",
+            "USB-C",
+            "Bluetooth",
+            "8 Buttons"
+        ],
+        "availability": true,
+        "rating": 4.6,
+        "brand": "Logitech"
+    },
+    {
+        "product_id": "ACC4002",
+        "product_title": "Anker USB-C Hub",
+        "product_image": "https://i.ibb.co/Z6jtqcFR/accesories.png",
+        "category": "Accessories",
+        "price": 65,
+        "description": "7-in-1 USB-C hub with HDMI, USB, SD, and power delivery.",
+        "Specification": [
+            "HDMI 4K",
+            "3x USB 3.0",
+            "SD/TF card",
+            "PD Charging"
+        ],
+        "availability": true,
+        "rating": 4.4,
+        "brand": "Anker"
+    },
+    {
+        "product_id": "ACC4003",
+        "product_title": "Sony WH-1000XM5",
+        "product_image": "https://i.ibb.co/Z6jtqcFR/accesories.png",
+        "category": "Accessories",
+        "price": 399,
+        "description": "Industry-leading noise-canceling wireless headphones.",
+        "Specification": [
+            "ANC",
+            "Bluetooth 5.2",
+            "30-hour Battery"
+        ],
+        "availability": true,
+        "rating": 4.9,
+        "brand": "Sony"
+    },
+    {
+        "product_id": "ACC4004",
+        "product_title": "Razer BlackWidow V3 Keyboard",
+        "product_image": "https://i.ibb.co/Z6jtqcFR/accesories.png",
+        "category": "Accessories",
+        "price": 139,
+        "description": "Mechanical gaming keyboard with RGB lighting.",
+        "Specification": [
+            "Mechanical Switches",
+            "RGB",
+            "USB"
+        ],
+        "availability": true,
+        "rating": 4.7,
+        "brand": "Razer"
+    }
+]

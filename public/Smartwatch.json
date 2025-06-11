@@ -1,0 +1,66 @@
+[
+    {
+        "product_id": "SWT3001",
+        "product_title": "Samsung Galaxy Watch 5",
+        "product_image": "https://i.ibb.co/hJh33VYs/smart-watc.png",
+        "category": "Smartwatch",
+        "price": 279,
+        "description": "Rugged smartwatch with health and fitness tracking features.",
+        "Specification": [
+            "GPS",
+            "Sleep Tracking",
+            "AMOLED Display"
+        ],
+        "availability": true,
+        "rating": 4.5,
+        "brand": "Samsung"
+    },
+    {
+        "product_id": "SWT3002",
+        "product_title": "Apple Watch Series 8",
+        "product_image": "https://i.ibb.co/hJh33VYs/smart-watc.png",
+        "category": "Smartwatch",
+        "price": 399,
+        "description": "Advanced health tracking with new temperature sensors.",
+        "Specification": [
+            "GPS + Cellular",
+            "Heart Rate Monitor",
+            "Crash Detection"
+        ],
+        "availability": true,
+        "rating": 4.8,
+        "brand": "Apple"
+    },
+    {
+        "product_id": "SWT3003",
+        "product_title": "Fitbit Versa 4",
+        "product_image": "https://i.ibb.co/tMCCf7bn/smart-watch.png",
+        "category": "Smartwatch",
+        "price": 179,
+        "description": "Smart fitness watch with 24/7 heart tracking and GPS.",
+        "Specification": [
+            "Heart Rate",
+            "GPS",
+            "Water Resistant"
+        ],
+        "availability": false,
+        "rating": 4.2,
+        "brand": "Fitbit"
+    },
+    {
+        "product_id": "SWT3004",
+        "product_title": "Garmin Venu 2",
+        "product_image": "https://i.ibb.co/tMCCf7bn/smart-watch.png",
+        "category": "Smartwatch",
+        "price": 349,
+        "description": "Fitness-focused watch with advanced health metrics.",
+        "Specification": [
+            "Heart Rate",
+            "Body Battery",
+            "AMOLED"
+        ],
+        "availability": true,
+        "rating": 4.4,
+        "brand": "Garmin"
+    }
+]

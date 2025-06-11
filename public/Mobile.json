@@ -1,0 +1,70 @@
+[
+    {
+        "product_id": "MOB2001",
+        "product_title": "iPhone 14 Pro",
+        "product_image": "https://i.ibb.co/95W2nTK/mobile.png",
+        "category": "Mobile",
+        "price": 1099,
+        "description": "Apple's flagship with advanced camera and A16 Bionic chip.",
+        "Specification": [
+            "6.1\" OLED",
+            "A16 Bionic",
+            "128GB",
+            "Triple-camera"
+        ],
+        "availability": true,
+        "rating": 4.8,
+        "brand": "Apple"
+    },
+    {
+        "product_id": "MOB2002",
+        "product_title": "Samsung Galaxy S23",
+        "product_image": "https://i.ibb.co/95W2nTK/mobile.png",
+        "category": "Mobile",
+        "price": 899,
+        "description": "Flagship Samsung phone with top-tier performance and camera.",
+        "Specification": [
+            "6.1\" AMOLED",
+            "Snapdragon 8 Gen 2",
+            "128GB",
+            "Triple-camera"
+        ],
+        "availability": true,
+        "rating": 4.7,
+        "brand": "Samsung"
+    },
+    {
+        "product_id": "MOB2003",
+        "product_title": "OnePlus 11",
+        "product_image": "https://i.ibb.co/95W2nTK/mobile.png",
+        "category": "Mobile",
+        "price": 699,
+        "description": "High-performance Android phone with clean UI and fast charging.",
+        "Specification": [
+            "6.7\" AMOLED",
+            "Snapdragon 8 Gen 2",
+            "8GB RAM",
+            "128GB"
+        ],
+        "availability": true,
+        "rating": 4.6,
+        "brand": "OnePlus"
+    },
+    {
+        "product_id": "MOB2004",
+        "product_title": "Google Pixel 7",
+        "product_image": "https://i.ibb.co/95W2nTK/mobile.png",
+        "category": "Mobile",
+        "price": 599,
+        "description": "Clean Android experience with powerful AI features.",
+        "Specification": [
+            "6.3\" OLED",
+            "Google Tensor",
+            "128GB",
+            "Dual-camera"
+        ],
+        "availability": true,
+        "rating": 4.5,
+        "brand": "Google"
+    }
+]

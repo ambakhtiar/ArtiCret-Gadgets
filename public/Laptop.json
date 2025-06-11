@@ -1,0 +1,70 @@
+[
+    {
+        "product_id": "LAP1001",
+        "product_title": "Dell XPS 13",
+        "product_image": "https://i.ibb.co/4RGhCsth/laptop.png",
+        "category": "Laptop",
+        "price": 999,
+        "description": "Ultra-thin, lightweight laptop with stunning display and performance.",
+        "Specification": [
+            "13.4\" FHD+",
+            "Intel i7",
+            "16GB RAM",
+            "512GB SSD"
+        ],
+        "availability": true,
+        "rating": 4.7,
+        "brand": "Dell"
+    },
+    {
+        "product_id": "LAP1002",
+        "product_title": "MacBook Air M2",
+        "product_image": "https://i.ibb.co/4RGhCsth/laptop.png",
+        "category": "Laptop",
+        "price": 1199,
+        "description": "Supercharged by M2 chip, ultra-portable and powerful.",
+        "Specification": [
+            "13.6\" Liquid Retina",
+            "M2 chip",
+            "8GB RAM",
+            "256GB SSD"
+        ],
+        "availability": true,
+        "rating": 4.9,
+        "brand": "Apple"
+    },
+    {
+        "product_id": "LAP1003",
+        "product_title": "HP Envy x360",
+        "product_image": "https://i.ibb.co/4RGhCsth/laptop.png",
+        "category": "Laptop",
+        "price": 799,
+        "description": "Convertible laptop with touchscreen and solid performance.",
+        "Specification": [
+            "15.6\" FHD",
+            "Ryzen 5",
+            "8GB RAM",
+            "256GB SSD"
+        ],
+        "availability": false,
+        "rating": 4.3,
+        "brand": "HP"
+    },
+    {
+        "product_id": "LAP1004",
+        "product_title": "Lenovo ThinkPad X1 Carbon",
+        "product_image": "https://i.ibb.co/4RGhCsth/laptop.png",
+        "category": "Laptop",
+        "price": 1299,
+        "description": "Premium business laptop with robust security and performance.",
+        "Specification": [
+            "14\" FHD",
+            "Intel i7",
+            "16GB RAM",
+            "1TB SSD"
+        ],
+        "availability": true,
+        "rating": 4.8,
+        "brand": "Lenovo"
+    }
+]
