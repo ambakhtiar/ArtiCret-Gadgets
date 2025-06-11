@@ -1,14 +1,18 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { contextCartItem } from "../Root/Root";
 import { PiSortAscendingLight, PiSortDescendingLight } from "react-icons/pi";
 import { ImEqualizer2 } from "react-icons/im";
 import DashboardItem from "../DashboardItem/DashboardItems";
+import { BsFillPatchCheckFill } from "react-icons/bs";
+import { MdCelebration } from "react-icons/md";
 
 
 const Cart = () => {
     const { cartItem, setCartItem } = useContext(contextCartItem);
+    const [purchaseCost, setPurchaseCost] = useState(0);
 
     const totalCost = cartItem.reduce((acc, item) => acc + item.price, 0);
+    const tc = totalCost;
 
     const handleSort = (type) => {
         const sortedCart = [...cartItem].sort((a, b) => {
@@ -16,6 +20,14 @@ const Cart = () => {
         });
         setCartItem(sortedCart);
     };
+
+    const handlePurchase = () => {
+        if (totalCost) {
+            setPurchaseCost(totalCost);
+            document.getElementById('purchaseModal').showModal();
+            setCartItem([]);
+        }
+    }
 
     return (
         <section className="max-w-5xl mx-auto">
@@ -32,7 +44,9 @@ const Cart = () => {
                                 <li onClick={() => handleSort(0)} className="text-lg font-semibold"><a>Descending <PiSortDescendingLight /></a></li>
                             </ul>
                         </div>
-                        <button className="rounded-3xl bg-[#8332C5] text-white px-4 py-2 text-lg font-semibold">Purchase</button>
+                        <button onClick={handlePurchase}
+                            className="rounded-3xl bg-[#8332C5] text-white px-4 py-2 text-lg font-semibold"
+                        >Purchase</button>
                     </div>
                 </div>
             </div>
@@ -40,10 +54,28 @@ const Cart = () => {
             {/* product  */}
             <div className="space-y-6">
                 {
-                    cartItem.map(card => <DashboardItem key={card.product_id} card={card}></DashboardItem>)
+                    cartItem.map(product => <DashboardItem key={product.product_id} product={product}></DashboardItem>)
                 }
             </div>
-        </section>
+
+
+            {/* Modal  */}
+            {/* <button className="btn" onClick={() => document.getElementById('purchaseModal').showModal()}>open modal</button> */}
+            <dialog id="purchaseModal" className="modal">
+                <div className="modal-box w-11/12 max-w-md">
+                    <div className="flex flex-col justify-center items-center gap-2">
+                        <h2 className="text-4xl font-bold text-green-700"><BsFillPatchCheckFill></BsFillPatchCheckFill></h2>
+                        <h2 className="text-4xl font-bold">Payment Successfully</h2>
+                        <p className="font-semibold text-lg">Thansks for Purchassing <span className="inline-block align-middle text-yellow-500"><MdCelebration /></span></p>
+                        <p className="font-semibold text-lg">Total: {purchaseCost} BDT</p>
+                        <form method="dialog" className="w-full">
+                            <button className="btn w-full bg-gray-400 font-semibold rounded-2xl hover:bg-gray-500">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+
+        </section >
     );
 };
 

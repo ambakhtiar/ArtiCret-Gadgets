@@ -67,14 +67,13 @@ const router = createBrowserRouter([
                 element: <Dashboard></Dashboard>,
                 children: [
                     {
-                        path: "/dashboard/cart",
+                        index: true,  // ✅ Makes Cart the default child route of /dashboard
                         element: <Cart></Cart>
                     },
                     {
-                        path: "/dashboard/wishlist",
+                        path: "wishlist",
                         element: <WishList></WishList>
                     }
-
                 ],
             },
         ],
@@ -86,7 +85,7 @@ createRoot(document.getElementById('root')).render(
         <RouterProvider router={router} />,
         <ToastContainer
             position="top-center"
-            autoClose={1000}
+            autoClose={500}
             hideProgressBar={false}
             newestOnTop={false}
             closeOnClick={false}

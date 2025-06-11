@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import NavBar from "../NavBar/NavBar";
 import { createContext, useState } from "react";
@@ -9,6 +9,8 @@ export const contextWishItem = createContext();
 const Root = () => {
     const [cartItem, setCartItem] = useState([]);
     const [wishItem, setWishItem] = useState([]);
+
+    const location = useLocation();
 
     return (
         <div>

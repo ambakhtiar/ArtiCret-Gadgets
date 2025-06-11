@@ -17,7 +17,7 @@ const WishList = () => {
     return (
         <section className="max-w-5xl mx-auto">
             {/* Title  */}
-            <div className="flex flex-col md:flex-row justify-between my-8 items-center">
+            <div className="flex flex-col md:flex-row justify-between my-8 items-center gap-4">
                 <h3 className="text-2xl font-bold ">WishList: {wishItem.length}</h3>
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="rounded-3xl border border-[#8332C5] px-4 py-2 text-lg font-semibold">Sort By Price <span className="inline-block"><ImEqualizer2 /></span></div>
@@ -31,7 +31,7 @@ const WishList = () => {
             {/* product  */}
             <div className="space-y-6">
                 {
-                    wishItem.map(card => <DashboardItem key={card.product_id} card={card}></DashboardItem>)
+                    wishItem.map(product => <DashboardItem key={product.product_id} product={product}></DashboardItem>)
                 }
             </div>
         </section>

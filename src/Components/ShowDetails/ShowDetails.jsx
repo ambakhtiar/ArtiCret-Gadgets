@@ -41,7 +41,7 @@ const ShowDetails = () => {
 
     return (
         <div className="mb-12">
-            <div className="bg-[#9538E2] py-12 lg:ml-6 lg:mr-6 text-white rounded-b-xl text-center">
+            <div className="bg-[#9538E2] py-12 lg:ml-6 lg:mr-6 text-white text-center">
                 <div className="max-w-5xl mx-auto">
                     <h1 className="text-2xl md:text-5xl font-bold mb-6 px-10">
                         Product Details</h1>
@@ -82,7 +82,7 @@ const ShowDetails = () => {
                         }
                     </div>
                     <div className="space-x-4">
-                        <button onClick={handleCartItem}
+                        <button onClick={() => handleCartItem()}
                             className="bg-[#9538E2] rounded-2xl px-6 py-3 text-white font-semibold">
                             Add To Cart <span className="inline-block pl-2 align-middle text-xl"><IoCartOutline /></span></button>
                         <button onClick={handleWishItem}
