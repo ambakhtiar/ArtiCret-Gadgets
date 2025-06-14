@@ -5,14 +5,16 @@ import { ImEqualizer2 } from "react-icons/im";
 import DashboardItem from "../DashboardItem/DashboardItems";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import { MdCelebration } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 
 const Cart = () => {
     const { cartItem, setCartItem } = useContext(contextCartItem);
     const [purchaseCost, setPurchaseCost] = useState(0);
+    const [isModalClosed, setIsModalClosed] = useState(false);
+    const navigate = useNavigate();
 
     const totalCost = cartItem.reduce((acc, item) => acc + item.price, 0);
-    const tc = totalCost;
 
     const handleSort = (type) => {
         const sortedCart = [...cartItem].sort((a, b) => {
@@ -26,6 +28,13 @@ const Cart = () => {
             setPurchaseCost(totalCost);
             document.getElementById('purchaseModal').showModal();
             setCartItem([]);
+            setIsModalClosed(true);
+        }
+    }
+
+    const handleModalClosed = () => {
+        if (isModalClosed) {
+            navigate("/");
         }
     }
 
@@ -44,8 +53,8 @@ const Cart = () => {
                                 <li onClick={() => handleSort(0)} className="text-lg font-semibold"><a>Descending <PiSortDescendingLight /></a></li>
                             </ul>
                         </div>
-                        <button onClick={handlePurchase}
-                            className="rounded-3xl bg-[#8332C5] text-white px-4 py-2 text-lg font-semibold"
+                        <button onClick={handlePurchase} disabled={totalCost === 0}
+                            className={`${totalCost === 0 ? "bg-gray-700 cursor-not-allowed" : "bg-[#8332C5]"} rounded-3xl text-white px-4 py-2 text-lg font-semibold`}
                         >Purchase</button>
                     </div>
                 </div>
@@ -61,14 +70,14 @@ const Cart = () => {
 
             {/* Modal  */}
             {/* <button className="btn" onClick={() => document.getElementById('purchaseModal').showModal()}>open modal</button> */}
-            <dialog id="purchaseModal" className="modal">
+            <dialog id="purchaseModal" className="modal ">
                 <div className="modal-box w-11/12 max-w-md">
                     <div className="flex flex-col justify-center items-center gap-2">
                         <h2 className="text-4xl font-bold text-green-700"><BsFillPatchCheckFill></BsFillPatchCheckFill></h2>
                         <h2 className="text-4xl font-bold">Payment Successfully</h2>
                         <p className="font-semibold text-lg">Thansks for Purchassing <span className="inline-block align-middle text-yellow-500"><MdCelebration /></span></p>
                         <p className="font-semibold text-lg">Total: {purchaseCost} BDT</p>
-                        <form method="dialog" className="w-full">
+                        <form method="dialog" className="w-full" onSubmit={handleModalClosed}>
                             <button className="btn w-full bg-gray-400 font-semibold rounded-2xl hover:bg-gray-500">Close</button>
                         </form>
                     </div>

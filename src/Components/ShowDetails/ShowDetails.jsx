@@ -1,8 +1,8 @@
 import { useLocation } from "react-router-dom";
 import { FaRegStarHalfStroke, FaRegHeart } from "react-icons/fa6";
 import { IoCartOutline } from "react-icons/io5";
-import { useContext } from "react";
-import { contextCartItem, contextWishItem } from "../Root/Root";
+import { useContext, useState } from "react";
+import { contextAddToCart, contextCartItem, contextWishItem } from "../Root/Root";
 import { toast } from "react-toastify";
 
 
@@ -10,34 +10,31 @@ const ShowDetails = () => {
     const { cartItem, setCartItem } = useContext(contextCartItem);
     const { wishItem, setWishItem } = useContext(contextWishItem);
     const location = useLocation();
+    const handleAddToCart = useContext(contextAddToCart);
 
-    const { product } = location.state || {};  // Access the product data
+    const { product } = location.state || {};  // Access the product data, when product export navigate hook use
     if (!product) {
         return <h1>No product data found.</h1>;  // fallback
     }
 
+    const [isAddedWishList, setIsAddedWishList] = useState(
+        !!wishItem.find(item => item.product_id === product.product_id)
+    );
+
     const { product_title, product_image, price, availability, description, Specification, rating } = product;
     const safeRating = Math.floor(rating);
 
-    const handleCartItem = () => {
-        if (!cartItem.find(item => item.product_id === product.product_id)) {
-            setCartItem([...cartItem, product]);
-            toast.success("Succesfully Product Add in Cart !");
+
+    const handleAddToWishList = () => {
+        if (!isAddedWishList) {
+            setWishItem([...wishItem, product]);
+            toast.success("Succesfully Product Add In Wish !");
+            setIsAddedWishList(true);
         } else {
             toast.error("Product Already Add In Cart !");
-            // console.log(cartItem);
         }
     }
 
-    const handleWishItem = () => {
-        if (!wishItem.find(item => item.product_id === product.product_id)) {
-            setWishItem([...wishItem, product]);
-            toast.success("Succesfully Product Add In Wish !");
-        } else {
-            toast.error("Product Already Add In Cart !");
-            // console.log(cartItem);
-        }
-    }
 
     return (
         <div className="mb-12">
@@ -52,8 +49,8 @@ const ShowDetails = () => {
             </div>
 
             <div className="flex flex-col md:flex-row bg-gary-200 rounded-xl gap-8 my-4 mx-8 md:mx-40">
-                <img className="flex-1 object-cover" src={product_image} alt="product image" />
-                <div className="flex-1 flex flex-col justify-evenly items-start gap-4">
+                <img className="flex-1 object-cover md:w-1/2 mx-auto" src={product_image} alt="product image" />
+                <div className="flex-1 flex flex-col items-start gap-2 justify-center">
                     <h1 className="text-xl font-semibold">{product_title}</h1>
                     <h4 className="text-lg font-semibold">Price: {price} BDT</h4>
                     {
@@ -81,12 +78,14 @@ const ShowDetails = () => {
                             ))
                         }
                     </div>
+
                     <div className="space-x-4">
-                        <button onClick={() => handleCartItem()}
-                            className="bg-[#9538E2] rounded-2xl px-6 py-3 text-white font-semibold">
+                        <button onClick={() => handleAddToCart(product)}
+                            className="bg-[#9538E2] rounded-3xl px-6 py-3 text-white font-semibold">
                             Add To Cart <span className="inline-block pl-2 align-middle text-xl"><IoCartOutline /></span></button>
-                        <button onClick={handleWishItem}
-                            className="rounded-full p-3 border">
+
+                        <button onClick={handleAddToWishList} disabled={isAddedWishList}
+                            className={`rounded-full p-3 border ${isAddedWishList ? "bg-gray-500 cursor-not-allowed" : "bg-white"}`}>
                             <FaRegHeart /></button>
                     </div>
                 </div>
