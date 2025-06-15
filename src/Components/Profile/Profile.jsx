@@ -1,9 +1,15 @@
 import React, { useContext } from 'react';
 import { contextPurchaseDate, contextPurchaseHistory } from '../Root/Root';
+import { useLocation } from 'react-router-dom';
 
 const Profile = () => {
     const [purchaseHistory, setPurchaseHistory] = useContext(contextPurchaseHistory);
     const [purchaseDate, setPurchaseDate] = useContext(contextPurchaseDate);
+    const location = useLocation();
+
+    if (location.pathname === "/profile") {
+        document.title = "Profile | ArtiCret";
+    }
 
     return (
         <div>
