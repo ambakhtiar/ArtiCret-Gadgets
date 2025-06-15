@@ -18,7 +18,9 @@ const Root = () => {
 
     const handleAddToCart = (product) => {
         const totalCost = cartItem.reduce((acc, item) => acc + item.price, 0) + product.price;
-        if (!cartItem.find(item => item.product_id === product.product_id)) {
+        if (!product.availability) {
+            toast.error("Product Stock Out !");
+        } else if (!cartItem.find(item => item.product_id === product.product_id)) {
             if (totalCost <= 5000) {
                 setCartItem([...cartItem, product]);
                 toast.success(`Succesfully Product Add in Cart ! Now Total Cost ${totalCost} BDT`);

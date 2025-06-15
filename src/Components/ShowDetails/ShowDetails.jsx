@@ -53,11 +53,11 @@ const ShowDetails = () => {
 
             <div className="absolute top-60 md:top-56 bg-white flex flex-col md:flex-row rounded-xl gap-8 p-8 max-w-sm md:max-w-5xl mx-10 md:mx-40 ">
                 <img className="md:flex-1 object-cover" src={product_image} alt="product image" />
-                <div className="md:flex-1 flex flex-col items-start gap-4 md:gap-2 justify-center">
-                    <h1 className="text-xl font-semibold">{product_title}</h1>
+                <div className="md:flex-1 flex flex-col items-start gap-4 justify-center">
+                    <h1 className="text-2xl font-semibold">{product_title}</h1>
                     <h4 className="text-lg font-semibold">Price: {price} BDT</h4>
                     {
-                        (availability ? <p className="text-green-600 border border-green-600 rounded-2xl px-4 py-2">In Stock</p> : <p>stock Out</p>)
+                        (availability ? <p className="text-green-600 border border-green-600 rounded-2xl px-2 py-1 font-semibold">In Stock</p> : <p className="text-red-500">Stock Out</p>)
                     }
                     <p className="text-gray-400">{description}</p>
                     <h4 className="text-lg font-semibold">Specification : </h4>
