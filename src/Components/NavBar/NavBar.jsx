@@ -47,13 +47,13 @@ const NavBar = () => {
                                 to="/dashboard">Dashboard</NavLink>
                             <NavLink className={({ isActive }) =>
                                 isActive ? "underline" : ""}
-                                to="">Statistics</NavLink>
+                                to="/statistics">Statistics</NavLink>
                             <NavLink className={({ isActive }) =>
                                 isActive ? "underline" : ""}
-                                to="">Your Account</NavLink>
+                                to="/profile">Your Account</NavLink>
                         </ul>
                     </div>
-                    <button onClick={handleGoHomePage} className={`${(location.pathname === "/" ? "text-white" : "text-black")} btn btn-ghost text-2xl`}>ArtiCret Gadgets</button>
+                    <button onClick={handleGoHomePage} className={`${(location.pathname === "/" ? "text-white" : "text-black")} btn btn-ghost text-2xl hover:text-black`}>ArtiCret Gadgets</button>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className={`${(location.pathname === "/" ? "text-white" : "text-black")} text-lg menu menu-horizontal px-1 gap-4`}>
@@ -65,10 +65,10 @@ const NavBar = () => {
                             to="/dashboard">Dashboard</NavLink>
                         <NavLink className={({ isActive }) =>
                             isActive ? "underline" : ""}
-                            to="statistics">Statistics</NavLink>
+                            to="/statistics">Statistics</NavLink>
                         <NavLink className={({ isActive }) =>
                             isActive ? "underline" : ""}
-                            to="profile">Your Account</NavLink>
+                            to="/profile">Your Account</NavLink>
                     </ul>
                 </div>
                 <div className="gap-4 navbar-end">

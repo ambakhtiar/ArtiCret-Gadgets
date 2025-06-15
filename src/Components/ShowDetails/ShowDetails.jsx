@@ -2,12 +2,11 @@ import { useLocation } from "react-router-dom";
 import { FaRegStarHalfStroke, FaRegHeart } from "react-icons/fa6";
 import { IoCartOutline } from "react-icons/io5";
 import { useContext, useState } from "react";
-import { contextAddToCart, contextCartItem, contextWishItem } from "../Root/Root";
+import { contextAddToCart, contextWishItem } from "../Root/Root";
 import { toast } from "react-toastify";
 
 
 const ShowDetails = () => {
-    const { cartItem, setCartItem } = useContext(contextCartItem);
     const { wishItem, setWishItem } = useContext(contextWishItem);
     const location = useLocation();
     const handleAddToCart = useContext(contextAddToCart);
@@ -15,6 +14,10 @@ const ShowDetails = () => {
     const { product } = location.state || {};  // Access the product data, when product export navigate hook use
     if (!product) {
         return <h1>No product data found.</h1>;  // fallback
+    }
+
+    if (location.pathname === "/product/details") {
+        document.title = "Product Details | ArtiCret";
     }
 
     const [isAddedWishList, setIsAddedWishList] = useState(
@@ -37,8 +40,8 @@ const ShowDetails = () => {
 
 
     return (
-        <div className="mb-12">
-            <div className="bg-[#9538E2] py-12 lg:ml-6 lg:mr-6 text-white text-center">
+        <div className="mb-[700px] md:mb-96 relative">
+            <div className="bg-[#9538E2] h-[460px] py-12 lg:ml-6 lg:mr-6 text-white text-center">
                 <div className="max-w-5xl mx-auto">
                     <h1 className="text-2xl md:text-5xl font-bold mb-6 px-10">
                         Product Details</h1>
@@ -48,9 +51,9 @@ const ShowDetails = () => {
                 </div>
             </div>
 
-            <div className="flex flex-col md:flex-row bg-gary-200 rounded-xl gap-8 my-4 mx-8 md:mx-40">
-                <img className="flex-1 object-cover md:w-1/2 mx-auto" src={product_image} alt="product image" />
-                <div className="flex-1 flex flex-col items-start gap-2 justify-center">
+            <div className="absolute top-60 md:top-56 bg-white flex flex-col md:flex-row rounded-xl gap-8 p-8 max-w-sm md:max-w-5xl mx-10 md:mx-40 ">
+                <img className="md:flex-1 object-cover" src={product_image} alt="product image" />
+                <div className="md:flex-1 flex flex-col items-start gap-4 md:gap-2 justify-center">
                     <h1 className="text-xl font-semibold">{product_title}</h1>
                     <h4 className="text-lg font-semibold">Price: {price} BDT</h4>
                     {
@@ -90,6 +93,7 @@ const ShowDetails = () => {
                     </div>
                 </div>
             </div>
+
         </div >
     );
 };

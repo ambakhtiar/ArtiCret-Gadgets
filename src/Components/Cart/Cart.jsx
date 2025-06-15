@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { contextCartItem } from "../Root/Root";
+import { contextCartItem, contextPurchaseDate, contextPurchaseHistory } from "../Root/Root";
 import { PiSortAscendingLight, PiSortDescendingLight } from "react-icons/pi";
 import { ImEqualizer2 } from "react-icons/im";
 import DashboardItem from "../DashboardItem/DashboardItems";
@@ -10,9 +10,13 @@ import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
     const { cartItem, setCartItem } = useContext(contextCartItem);
+    const [purchaseHistory, setPurchaseHistory] = useContext(contextPurchaseHistory);
+    const [purchaseDate, setPurchaseDate] = useContext(contextPurchaseDate);
     const [purchaseCost, setPurchaseCost] = useState(0);
     const [isModalClosed, setIsModalClosed] = useState(false);
     const navigate = useNavigate();
+
+    const date = new Date();
 
     const totalCost = cartItem.reduce((acc, item) => acc + item.price, 0);
 
@@ -26,9 +30,14 @@ const Cart = () => {
     const handlePurchase = () => {
         if (totalCost) {
             setPurchaseCost(totalCost);
+            setPurchaseHistory([...purchaseHistory, totalCost]);
+            setPurchaseDate([...purchaseDate, date])
+
             document.getElementById('purchaseModal').showModal();
             setCartItem([]);
             setIsModalClosed(true);
+
+
         }
     }
 

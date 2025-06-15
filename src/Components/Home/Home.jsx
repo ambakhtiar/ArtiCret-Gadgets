@@ -1,10 +1,15 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import Categories from "../Categories/Categories";
 import { useRef } from "react";
 
 const Home = () => {
-    const productsRef = useRef(null); // 🟢 Create ref
+    const location = useLocation();
+    const productsRef = useRef(null);
+
+    if (location.pathname === "/") {
+        document.title = "ArtiCret Gadgets";
+    }
 
     const handleShopNowClick = () => {
         productsRef.current?.scrollIntoView({ behavior: 'smooth' });

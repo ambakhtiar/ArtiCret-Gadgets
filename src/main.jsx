@@ -19,6 +19,10 @@ import Dashboard from './Components/Dashboard/Dashboard';
 import Cart from './Components/Cart/Cart';
 import WishList from './Components/WishList/WishList';
 import { ToastContainer, Zoom } from 'react-toastify';
+import Statistics from './Components/Statistics/Statistics';
+import Profile from './Components/Profile/Profile';
+import CartStatistics from './Components/CartStatistics/CartStatistics';
+import WishListStatistic from './Components/WishListStatistic/WishListStatistic';
 
 
 const router = createBrowserRouter([
@@ -76,6 +80,24 @@ const router = createBrowserRouter([
                     }
                 ],
             },
+            {
+                path: "/statistics",
+                element: <Statistics></Statistics>,
+                children: [
+                    {
+                        index: true,
+                        element: <CartStatistics></CartStatistics>
+                    },
+                    {
+                        path: "/statistics/wishlist",
+                        element: <WishListStatistic></WishListStatistic>
+                    }
+                ]
+            },
+            {
+                path: "/profile",
+                element: <Profile></Profile>
+            }
         ],
     },
 ]);

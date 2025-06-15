@@ -7,10 +7,14 @@ import { toast } from "react-toastify";
 export const contextCartItem = createContext();
 export const contextWishItem = createContext();
 export const contextAddToCart = createContext();
+export const contextPurchaseHistory = createContext();
+export const contextPurchaseDate = createContext();
 
 const Root = () => {
     const [cartItem, setCartItem] = useState([]);
     const [wishItem, setWishItem] = useState([]);
+    const [purchaseHistory, setPurchaseHistory] = useState([]);
+    const [purchaseDate, setPurchaseDate] = useState([]);
 
     const handleAddToCart = (product) => {
         const totalCost = cartItem.reduce((acc, item) => acc + item.price, 0) + product.price;
@@ -32,10 +36,13 @@ const Root = () => {
         <div>
             <contextWishItem.Provider value={{ wishItem, setWishItem }}>
                 <contextCartItem.Provider value={{ cartItem, setCartItem }}> {/*value send like object*/}
-
-                    <contextAddToCart.Provider value={handleAddToCart}>
-                        <NavBar></NavBar>
-                        <Outlet></Outlet>
+                    <contextAddToCart.Provider value={handleAddToCart}> {/*value send like function*/}
+                        <contextPurchaseHistory.Provider value={[purchaseHistory, setPurchaseHistory]}>
+                            <contextPurchaseDate.Provider value={[purchaseDate, setPurchaseDate]}>
+                                <NavBar></NavBar>
+                                <Outlet></Outlet>
+                            </contextPurchaseDate.Provider>
+                        </contextPurchaseHistory.Provider>
                     </contextAddToCart.Provider>
                 </contextCartItem.Provider>
             </contextWishItem.Provider>
