@@ -16,10 +16,6 @@ const ShowDetails = () => {
         return <h1>No product data found.</h1>;  // fallback
     }
 
-    if (location.pathname === "/product/details") {
-        document.title = "Product Details | ArtiCret";
-    }
-
     const [isAddedWishList, setIsAddedWishList] = useState(
         !!wishItem.find(item => item.product_id === product.product_id)
     );
@@ -27,6 +23,9 @@ const ShowDetails = () => {
     const { product_title, product_image, price, availability, description, Specification, rating } = product;
     const safeRating = Math.floor(rating);
 
+    if (location.pathname === "/product/details") {
+        document.title = `${product_title} | ArtiCret`;
+    }
 
     const handleAddToWishList = () => {
         if (!isAddedWishList) {
