@@ -57,7 +57,7 @@ const ShowDetails = () => {
                     <h1 className="text-2xl font-semibold">{product_title}</h1>
                     <h4 className="text-lg font-semibold">Price: {price} BDT</h4>
                     {
-                        (availability ? <p className="text-green-600 border border-green-600 rounded-2xl px-2 py-1 font-semibold">In Stock</p> : <p className="text-red-500">Stock Out</p>)
+                        (availability ? <p className="text-green-600 border border-green-600 rounded-2xl px-2 py-1 font-semibold">In Stock</p> : <p className="text-red-500 font-semibold">Stock Out</p>)
                     }
                     <p className="text-gray-400">{description}</p>
                     <h4 className="text-lg font-semibold">Specification : </h4>
