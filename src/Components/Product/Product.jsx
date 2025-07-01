@@ -9,7 +9,7 @@ const Product = ({ product }) => {
     const { product_title, product_image, price } = product;
 
     return (
-        <div className="space-y-6 p-5 bg-white rounded-xl">
+        <div className="flex flex-col justify-between gap-6 p-5 bg-white rounded-xl">
             <img className="object-cover rounded-xl w-full mx-auto" src={product_image} alt="" />
             <h2 className="text-2xl font-bold">{product_title}</h2>
             <p>Price: {price}</p>

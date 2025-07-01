@@ -40,7 +40,7 @@ const NavBar = () => {
                         </div>
                         <ul tabIndex={0} className="gap-4 text-black menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                             <NavLink className={({ isActive }) =>
-                                isActive ? "underline" : ""}
+                                isActive ? "underline" : "hover:underline"}
                                 to="/">Home</NavLink>
                             <NavLink className={({ isActive }) =>
                                 isActive ? "underline" : ""}
